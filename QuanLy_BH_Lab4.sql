@@ -1,0 +1,27 @@
+-- TAO DATABASE --
+CREATE database QuanLyBH_Lab4;
+
+-- XOA DB --
+DROP DATABASE QuanLyBH_Lab4;
+
+-- SU DUNG DB-
+USE QuanLyBH_Lab4;
+
+CREATE TABLE LOAI 
+(
+    TENLOAI VARCHAR(10)
+);
+
+-- THÊM COLUNM--
+ALTER TABLE LOAI
+ADD MALOAI VARCHAR(5) NOT NULL;
+
+-- THEM KHOA CHINH --
+ALTER TABLE LOAI 
+ADD constraint pr_maloai
+primary key(MALOAI);
+
+-- XOA BANG --
+DROP TABLE LOAI;
+
+-- THEM KHOA NGOAI --
